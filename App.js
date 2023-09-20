@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Header from './Components/header';
+import Header from './components/header'
 import Login from './screens/login';
 
 const App = () => {
