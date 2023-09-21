@@ -1,35 +1,50 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'react-native';
+import Header from '../components/header'
 
 const Login = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Login</Text>
-            <Text style={styles.subtitle}>E-mail:</Text>
-            <TextInput
-                style={styles.input}
-            />
-            <Text style={styles.subtitle}>Senha:</Text>
-            <TextInput
-                style={styles.input}
-                secureTextEntry={true}
-            />
-            <TouchableOpacity style={styles.loginButton}>
-                <Text style={styles.loginButtonText}>Fazer Login</Text>
-            </TouchableOpacity>
-            <Text style={styles.registerButton}>ou cadastre-se aqui</Text>
+            <Header></Header>
+            <View style={styles.loginContainer}>
+                <View style={styles.login}>
+                    <Text style={styles.title}>Login</Text>
+                    <Text style={styles.subtitle}>E-mail:</Text>
+                    <TextInput
+                        style={styles.input}
+                    />
+                    <Text style={styles.subtitle}>Senha:</Text>
+                    <TextInput
+                        style={styles.input}
+                        secureTextEntry={true}
+                    />
+                    <TouchableOpacity style={styles.loginButton}>
+                        <Text style={styles.loginButtonText}>Fazer Login</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.registerButton}>ou cadastre-se aqui</Text>
+                </View>
+            </View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: '#FEECCD',
+        flex: 1
+    },
+    loginContainer: {
+        flex: 1,
+        justifyContent: 'center'
+    },
+    login: {
         alignContent: 'center',
         alignItems: 'center',
         backgroundColor: '#CDC773',
         padding: 20,
         borderRadius: 10,
-        borderRadius: 20
+        borderRadius: 20,
+        marginHorizontal: 40
     },
     title: {
         fontSize: 35,
@@ -48,7 +63,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         backgroundColor: '#FFFFFF',
         borderRadius: 8,
-        width: 300,
+        width: '100%',
         height: 31,
         paddingHorizontal: 10
     },
