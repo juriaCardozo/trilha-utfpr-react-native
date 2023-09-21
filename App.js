@@ -1,13 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Header from './components/header'
-import Login from './screens/login';
-import Cadastro from './screens/cadastro';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
 
 const App = () => {
   return (
       <View style={styles.container}>
-        <Cadastro></Cadastro>
+        <LoginScreen></LoginScreen>
       </View>
   );
 };

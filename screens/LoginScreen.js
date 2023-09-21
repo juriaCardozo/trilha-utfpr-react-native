@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'react-native';
 import Header from '../components/header'
 
-const Login = () => {
+const LoginScreen = () => {
     return (
         <View style={styles.container}>
             <Header></Header>
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Login;
+export default LoginScreen;

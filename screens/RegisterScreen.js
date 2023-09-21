@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'rea
 import Header from '../components/header'
 
 
-const Cadastro = () => {
+const RegisterScreen = () => {
 
 
     const [isChecked, setIsChecked] = useState(false);
@@ -131,4 +131,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Cadastro;
+export default RegisterScreen;
