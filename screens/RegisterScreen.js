@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'rea
 import Header from '../components/header'
 
 
-const RegisterScreen = () => {
+const RegisterScreen = ({navigation}) => {
 
 
     const [isChecked, setIsChecked] = useState(false);
@@ -47,7 +47,10 @@ const RegisterScreen = () => {
                     <TouchableOpacity style={styles.cadastroButton}>
                         <Text style={styles.cadastroButtonText}>Fazer Cadastro</Text>
                     </TouchableOpacity>
-                    <Text style={styles.loginButton}>ou faça login aqui</Text>
+                    <TouchableOpacity onPress={() =>
+                        navigation.navigate('Login')}>
+                        <Text style={styles.loginButton}>ou faça login aqui</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>

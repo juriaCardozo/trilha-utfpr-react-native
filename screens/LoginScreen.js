@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'react-native';
 import Header from '../components/header'
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Header></Header>
@@ -21,7 +21,10 @@ const LoginScreen = () => {
                     <TouchableOpacity style={styles.loginButton}>
                         <Text style={styles.loginButtonText}>Fazer Login</Text>
                     </TouchableOpacity>
-                    <Text style={styles.registerButton}>ou cadastre-se aqui</Text>
+                    <TouchableOpacity  onPress={() =>
+                        navigation.navigate('Register')}>
+                        <Text style={styles.registerButton}>ou cadastre-se aqui</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -83,7 +86,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#5B2F14',
         fontSize: 20,
-        marginTop: 3
+        marginTop: 4,
+        backgroundColor: 'transparent'
     }
 
 });
