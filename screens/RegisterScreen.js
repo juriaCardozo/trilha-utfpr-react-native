@@ -16,7 +16,7 @@ const RegisterScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View>
-                <Header></Header>
+                <Header titleText={'TítuloApp'}></Header>
             </View>
             <View style={styles.cadastroContainer}>
                 <View style={styles.cadastro}>

@@ -5,7 +5,7 @@ import Header from '../components/header'
 const LoginScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Header></Header>
+            <Header titleText={'TítuloApp'}></Header>
             <View style={styles.loginContainer}>
                 <View style={styles.login}>
                     <Text style={styles.title}>Login</Text>
