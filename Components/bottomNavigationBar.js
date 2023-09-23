@@ -1,16 +1,20 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const App = () => {
+const BottomNavigationBar = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.bar}>
                 <View style={[styles.circle, styles.separator]}>
-                    <Icon name='navigation' size={25} color='#FFC126'></Icon>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                        <Icon name='navigation' size={25} color='#FFC126'></Icon>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.circle}>
+                    <TouchableOpacity onPress={() => navigation.navigate('CurrentTrack')}>
                     <Icon name='award' size={28} color='#FFC126'></Icon>
+                    </TouchableOpacity>
                 </View>
                 <View style={[styles.largeCircle, styles.separator]}>
                     <Icon name='home' size={37} color='#FFC126'></Icon>
@@ -58,4 +62,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default App;
+export default BottomNavigationBar;

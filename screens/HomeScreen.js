@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Image, TouchableOpacity, Modal, Text } from 'react-native';
 import HomeHeader from '../components/homeHeader';
-import BottomNavigationBar from '../components/bottomNavigationBar';
 import Icon from 'react-native-vector-icons/Feather';
+import BottomNavigationBar from '../components/bottomNavigationBar';
 
 const HomeScreen = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
