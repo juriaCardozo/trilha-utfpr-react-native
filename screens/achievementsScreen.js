@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Image, TouchableOpacity, Modal, Text } from 'react-native';
 import BottomNavigationBar from '../components/bottomNavigationBar';
 import Header from '../components/header';
-import ListItem from '../components/listItem';
+import AchievementItem from '../components/achievementItem';
 import BlockedAchievement from '../components/blockedAchievement';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const AchievementsScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Header titleText={'Conquistas'}></Header>
             <View style={styles.homeContainer}>
-                <ListItem text={'Desbravador!'} text2={'(Concluiu uma trilha)'} iconName={'award'} ></ListItem>
-                <ListItem text={'Biólogo!'} text2={'(Investigou uma planta)'} iconName={'award'} ></ListItem>
+                <AchievementItem text={'Desbravador!'} text2={'(Concluiu uma trilha)'} iconName={'award'} ></AchievementItem>
+                <AchievementItem text={'Biólogo!'} text2={'(Investigou uma planta)'} iconName={'award'} ></AchievementItem>
                 <BlockedAchievement></BlockedAchievement>
             </View>
-            <BottomNavigationBar></BottomNavigationBar>
+            <BottomNavigationBar navigation={navigation} />
         </View>
     );
 };

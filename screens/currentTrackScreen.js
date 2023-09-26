@@ -2,6 +2,8 @@ import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import Header from '../components/header'
 import BottomNavigationBar from '../components/bottomNavigationBar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 const CurrentTrackScreen = ({navigation}) => {
@@ -11,7 +13,7 @@ const CurrentTrackScreen = ({navigation}) => {
            <View style={styles.trackContainer}>
            <Image source={require('../assets/images/track.png')} style={styles.track}></Image>
            </View>
-           <BottomNavigationBar></BottomNavigationBar>
+           <BottomNavigationBar navigation={navigation} />
         </View>
     );
 };

@@ -3,6 +3,8 @@ import { View, StyleSheet, Image, TouchableOpacity, Modal, Text } from 'react-na
 import Icon from 'react-native-vector-icons/Feather';
 import BottomNavigationBar from '../components/bottomNavigationBar';
 import Header from '../components/header';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const HomeScreen = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -45,7 +47,7 @@ const HomeScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </Modal>
-            <BottomNavigationBar></BottomNavigationBar>
+            <BottomNavigationBar navigation={navigation} />
         </View>
     );
 };

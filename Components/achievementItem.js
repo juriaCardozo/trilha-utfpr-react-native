@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const ListItem = ({ text, text2, iconName }) => {
+const AchievementItem = ({ text, text2, iconName }) => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     elevation: 10,
     width: 376,
     height: 62,
-    borderRadius: 10
+    borderRadius: 20
   },
   textContainer: {
     alignItems: 'center'
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ListItem;
+export default AchievementItem;

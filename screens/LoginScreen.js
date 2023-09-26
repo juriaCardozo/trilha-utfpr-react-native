@@ -2,6 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import Header from '../components/header'
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 const LoginScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
@@ -18,7 +21,7 @@ const LoginScreen = ({ navigation }) => {
                         style={styles.input}
                         secureTextEntry={true}
                     />
-                    <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('Achievements')}>
+                    <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('Home')}>
                         <Text style={styles.loginButtonText}>Fazer Login</Text>
                     </TouchableOpacity>
                     <TouchableOpacity  onPress={() =>

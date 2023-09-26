@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'react-native';
 import Header from '../components/header'
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 const RegisterScreen = ({navigation}) => {
@@ -44,7 +46,8 @@ const RegisterScreen = ({navigation}) => {
                     <Text style={{fontSize: 16, alignSelf: 'center', justifyContent: 'center', flex: 1}}>Li e aceito os termos de uso do aplicativo</Text>
                     </TouchableOpacity>
                     
-                    <TouchableOpacity style={styles.cadastroButton}>
+                    <TouchableOpacity style={styles.cadastroButton}  onPress={() =>
+                        navigation.navigate('Login')}>
                         <Text style={styles.cadastroButtonText}>Fazer Cadastro</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() =>
