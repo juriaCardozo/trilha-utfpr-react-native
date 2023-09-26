@@ -6,7 +6,7 @@ import LoginScreen from './screens/loginScreen';
 import RegisterScreen from './screens/registerScreen';
 import HomeScreen from './screens/homeScreen';
 import CurrentTrackScreen from './screens/currentTrackScreen';
-import BottomNavigationBar from './components/bottomNavigationBar';
+import AchievementsScreen from './screens/achievementsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +18,7 @@ const App = () => {
         <Stack.Screen name='Register' component={RegisterScreen} />
         <Stack.Screen name='Home' component={HomeScreen} />
         <Stack.Screen name='CurrentTrack' component={CurrentTrackScreen} />
+        <Stack.Screen name='Achievements' component={AchievementsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

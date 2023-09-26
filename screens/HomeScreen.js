@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, Image, TouchableOpacity, Modal, Text } from 'react-native';
-import HomeHeader from '../components/homeHeader';
 import Icon from 'react-native-vector-icons/Feather';
 import BottomNavigationBar from '../components/bottomNavigationBar';
+import Header from '../components/header';
 
 const HomeScreen = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <HomeHeader></HomeHeader>
+            <Header titleText={'Home'}></Header>
             <View style={styles.homeContainer}>
                 <Image source={require('../assets/images/map.png')} style={styles.map}></Image>
                 <TouchableOpacity onPress={handleButtonPress} style={{ position: 'absolute' }}>
@@ -34,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
                 <View style={styles.modalContainer}>
                     <Text style={styles.textMapPinDetails}>Informações sobre a trilha selecionada</Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 10 }}>
-                        <Icon name='star' size={40} color='#FFBF00' style={styles.starIcon}></Icon>
+                        <Icon name='star' size={40} color='#FFBF00' style={styles.starIcon} ></Icon>
                         <Icon name='star' size={40} color='#FFBF00' style={styles.starIcon}></Icon>
                         <Icon name='star' size={40} color='#FFBF00' style={styles.starIcon}></Icon>
                         <Icon name='star' size={40} color='#FFBF00' style={styles.starIcon}></Icon>

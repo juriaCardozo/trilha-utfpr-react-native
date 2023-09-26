@@ -3,6 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 const BottomNavigationBar = ({ navigation }) => {
+
     return (
         <View style={styles.container}>
             <View style={styles.bar}>
