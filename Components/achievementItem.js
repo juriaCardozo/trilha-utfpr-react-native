@@ -14,6 +14,7 @@ const AchievementItem = ({ text, text2, iconName }) => {
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#CDC773',
