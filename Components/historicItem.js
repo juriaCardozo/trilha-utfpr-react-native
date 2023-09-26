@@ -3,7 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const HistoricItem = ({ text, navigation, screen }) => {
   return (
-    <TouchableOpacity style={styles.container} onPress = {() => navigation.navigate(screen)}>
+    <TouchableOpacity style={styles.container} onPress = {() => {
+      if(screen != null) {
+        navigation.navigate(screen)
+      }
+      }}>
         <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
