@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const AchievementItem = ({ text, text2, iconName }) => {
+const ListItem = ({ text, text2, iconName }) => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AchievementItem;
+export default ListItem;

@@ -5,7 +5,7 @@ import Header from '../components/header';
 import ListItem from '../components/listItem';
 import BlockedAchievement from '../components/blockedAchievement';
 
-const AchievementsScreen = ({ navigation }) => {
+const HistoricScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Header titleText={'Conquistas'}></Header>
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default AchievementsScreen;
+export default HistoricScreen;
