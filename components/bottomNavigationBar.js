@@ -1,35 +1,10 @@
-import { Camera } from 'expo-camera';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const BottomNavigationBar = ({ navigation }) => {
-    const [hasPermission, setHasPermission] = useState(null);
-    const [type, setType] = useState(Camera.Constants.Type.back);
-    const [camera, setCamera] = useState(null);
-
-    useEffect(() => {
-        (async () => {
-            const { status } = await Camera.requestCameraPermissionsAsync();
-            setHasPermission(status === 'granted');
-        })();
-    }, []);
-
-    const handleCameraType = () => {
-        setType(
-            type === Camera.Constants.Type.back
-                ? Camera.Constants.Type.front
-                : Camera.Constants.Type.back
-        );
-    };
-
-    const takePicture = async () => {
-        if (camera) {
-            const photo = await camera.takePictureAsync();
-            console.log(photo);
-        }
-    };
-
     return (
         <View style={styles.container}>
             <View style={styles.bar}>
@@ -44,7 +19,7 @@ const BottomNavigationBar = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
                 <View style={[styles.largeCircle, styles.separator]}>
-                    <TouchableOpacity  onPress={takePicture}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                         <Icon name='home' size={37} color='#FFC126'></Icon>
                     </TouchableOpacity>
                 </View>
@@ -59,17 +34,6 @@ const BottomNavigationBar = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
             </View>
-            {hasPermission === null ? (
-        <View />
-      ) : hasPermission === false ? (
-        <Text>No access to camera</Text>
-      ) : (
-        <Camera
-          ref={(ref) => setCamera(ref)}
-          style={{ flex: 1, display: 'none' }} // Esconda a visualização da câmera
-          type={type}
-        />
-      )}
         </View>
     );
 };

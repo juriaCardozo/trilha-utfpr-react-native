@@ -21,28 +21,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO"
-      ],
-      "package": "com.juliaa.TrilhaUTFPR"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow TrilhaUTFPR to access your camera."
-        }
-      ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "10b1c9e7-c484-4a57-a41d-44c055ad94fa"
-      }
     }
   }
 }
